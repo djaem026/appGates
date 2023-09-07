@@ -54,7 +54,7 @@
                 {{--Academics--}}
                 @if(Qs::userIsAcademic())
                     <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['tt.index', 'ttr.edit', 'ttr.show', 'ttr.manage']) ? 'nav-item-expanded nav-item-open' : '' }} ">
-                        <a href="#" class="nav-link"><i class="icon-graduation2"></i> <span> Academicss</span></a>
+                        <a href="#" class="nav-link"><i class="icon-graduation2"></i> <span> Academics</span></a>
 
                         <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
 
