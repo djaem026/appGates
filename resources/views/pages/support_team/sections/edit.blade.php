@@ -16,7 +16,7 @@
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label font-weight-semibold">Name <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
-                                <input name="name" value="{{ $s->name }}" required type="text" class="form-control" placeholder="Name of Class">
+                                <input name="name" value="{{ $s->name }}" required type="text" class="form-control" placeholder="Name of Section">
                             </div>
                         </div>
 

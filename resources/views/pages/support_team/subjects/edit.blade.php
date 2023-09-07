@@ -21,7 +21,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">Short Name</label>
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Subject Code</label>
                             <div class="col-lg-9">
                                 <input name="slug" value="{{ $s->slug }}"  type="text" class="form-control" placeholder="Short Name">
                             </div>

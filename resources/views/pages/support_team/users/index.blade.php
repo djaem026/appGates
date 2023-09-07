@@ -76,23 +76,23 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-3">
+                                <!-- <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Telephone:</label>
                                         <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="+2341234567" >
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
 
                             <div class="row">
-                                <div class="col-md-3">
+                                <!-- <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Date of Employment:</label>
                                         <input autocomplete="off" name="emp_date" value="{{ old('emp_date') }}" type="text" class="form-control date-pick" placeholder="Select Date...">
 
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="col-md-3">
                                     <div class="form-group">
@@ -112,7 +112,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-3">
+                                <!-- <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="nal_id">Nationality: <span class="text-danger">*</span></label>
                                         <select data-placeholder="Choose..." required name="nal_id" id="nal_id" class="select-search form-control">
@@ -122,7 +122,7 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="row">
@@ -144,7 +144,7 @@
                                     </select>
                                 </div> -->
                                 {{--BLOOD GROUP--}}
-                                <div class="col-md-4">
+                                <!-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="bg_id">Blood Group: </label>
                                         <select class="select form-control" id="bg_id" name="bg_id" data-fouc data-placeholder="Choose..">
@@ -154,7 +154,7 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
 

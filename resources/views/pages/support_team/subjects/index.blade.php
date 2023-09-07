@@ -35,7 +35,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="slug" class="col-lg-3 col-form-label font-weight-semibold">Short Name <span class="text-danger">*</span></label>
+                                    <label for="slug" class="col-lg-3 col-form-label font-weight-semibold">Subject Code <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input id="slug" required name="slug" value="{{ old('slug') }}" type="text" class="form-control" placeholder="Eg. B.Eng">
                                     </div>
