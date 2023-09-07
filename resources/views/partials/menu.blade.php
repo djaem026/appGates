@@ -59,7 +59,7 @@
                         <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
 
                         {{--Timetables--}}
-                            <li class="nav-item"><a href="{{ route('tt.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['tt.index']) ? 'active' : '' }}">Schedules</a></li>
+                            <li class="nav-item"><a href="{{ route('tt.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['tt.index']) ? 'active' : '' }}">Scheduless</a></li>
                         </ul>
                     </li>
                     @endif
