@@ -1,0 +1,1 @@
+<?php /**PATH /home/u299472748/domains/appgate.website/public_html/resources/views/pages/accountant/menu.blade.php ENDPATH**/ ?>
