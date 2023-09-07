@@ -79,7 +79,7 @@
                             <tr>
                                 <th>S/N</th>
                                 <th>Name</th>
-                                <th>Short Name</th>
+                                <th>Subject Code</th>
                                 <th>Class</th>
                                 <th>Teacher</th>
                                 <th>Action</th>
