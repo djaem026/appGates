@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\appGate\resources\views/pages/admin/menu.blade.php ENDPATH**/ ?>

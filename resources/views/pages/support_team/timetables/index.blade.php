@@ -4,17 +4,17 @@
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Manage TimeTables</h6>
+            <h6 class="card-title">Manage Schedules</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
                 @if(Qs::userIsTeamSA())
-                <li class="nav-item"><a href="#add-tt" class="nav-link active" data-toggle="tab">Create Timetable</a></li>
+                <li class="nav-item"><a href="#add-tt" class="nav-link active" data-toggle="tab">Create Schedule</a></li>
                 @endif
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Show TimeTables</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Show Schedules</a>
                     <div class="dropdown-menu dropdown-menu-right">
                         @foreach($my_classes as $mc)
                             <a href="#ttr{{ $mc->id }}" class="dropdown-item" data-toggle="tab">{{ $mc->name }}</a>

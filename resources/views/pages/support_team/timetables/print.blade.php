@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>TimeTable - {{ $ttr->name.' - '.$ttr->year }}</title>
+    <title>Schedule - {{ $ttr->name.' - '.$ttr->year }}</title>
     <style>
         @media print {
 
@@ -43,7 +43,7 @@
                     <strong><span style="color: #000; font-size: 15px;"><i>{{ ucwords($s['address']) }}</i></span></strong><br/>
                     <strong><span style="color: #000; text-decoration: underline; font-size: 15px;"><i>{{ config('app.url') }}/i></span></strong>
                     <br /> <br />
-                    <strong><span style="color: #000; font-size: 15px;"> TIMETABLE FOR {{ strtoupper($my_class->name. ' ('.$ttr->year.')' ) }}
+                    <strong><span style="color: #000; font-size: 15px;"> SCHEDULE FOR {{ strtoupper($my_class->name. ' ('.$ttr->year.')' ) }}
                     </span></strong>
                 </td>
             </tr>
