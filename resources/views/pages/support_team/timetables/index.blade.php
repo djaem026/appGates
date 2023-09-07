@@ -19,7 +19,7 @@
                         @foreach($my_classes as $mc)
                             <a href="#ttr{{ $mc->id }}" class="dropdown-item" data-toggle="tab">{{ $mc->name }}</a>
                         @endforeach
-                    </div>
+                    </div>.
                 </li>
             </ul>
 
