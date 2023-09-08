@@ -50,14 +50,14 @@
                                </div>
                            </div>
 
-                           <div class="form-group row">
+                           <!-- <div class="form-group row">
                                <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">Type</label>
                                <div class="col-lg-9">
                                    <select class="select form-control" name="exam_id" id="exam_id">
                                        <option value="">Class Schedule</option>
                                    </select>
                                </div>
-                           </div>
+                           </div> -->
 
 
                            <div class="text-right">
@@ -76,7 +76,6 @@
                                 <th>S/N</th>
                                 <th>Name</th>
                                 <th>Class</th>
-                                <th>Type</th>
                                 <th>Year</th>
                                 <th>Action</th>
                             </tr>
@@ -87,8 +86,6 @@
                                     <td><?php echo e($loop->iteration); ?></td>
                                     <td><?php echo e($ttr->name); ?></td>
                                     <td><?php echo e($ttr->my_class->name); ?></td>
-                                    <td><?php echo e(($ttr->exam_id) ? $ttr->exam->name : 'Class TimeTable'); ?>
-
                                     <td><?php echo e($ttr->year); ?></td>
                                     <td class="text-center">
                                         <div class="list-icons">
