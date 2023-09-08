@@ -31,9 +31,7 @@ class StudentRecordCreate extends FormRequest
             'address' => 'required|string|min:6|max:120',
             'my_class_id' => 'required',
             'section_id' => 'required',
-            'my_parent_id' => 'sometimes|nullable',
-            'dorm_id' => 'sometimes|nullable',
-        ];
+            'my_parent_id' => 'sometimes|nullable'        ];
     }
 
     public function attributes()
@@ -42,9 +40,7 @@ class StudentRecordCreate extends FormRequest
             'section_id' => 'Section',
             'nal_id' => 'Nationality',
             'my_class_id' => 'Class',
-            'dorm_id' => 'Dormitory',
-            'bg_id' => 'Blood Group',
-            'my_parent_id' => 'Parent',
+            'my_parent_id' => 'Parent'
         ];
     }
 

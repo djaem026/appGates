@@ -55,12 +55,6 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label>Telephone:</label>
-                                <input value="<?php echo e(old('phone2')); ?>" type="text" name="phone2" class="form-control" placeholder="" >
-                            </div>
-                        </div>
 
                     </div>
 
@@ -73,17 +67,6 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="nal_id">Nationality: <span class="text-danger">*</span></label>
-                                <select data-placeholder="Choose..." required name="nal_id" id="nal_id" class="select-search form-control">
-                                    <option value=""></option>
-                                    <?php $__currentLoopData = $nationals; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $nal): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <option <?php echo e((old('nal_id') == $nal->id ? 'selected' : '')); ?> value="<?php echo e($nal->id); ?>"><?php echo e($nal->name); ?></option>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </select>
-                            </div>
-                        </div>
 
                        
                     </div>
