@@ -80,7 +80,7 @@
 
                                 <ul class="nav nav-group-sub">
                                     <li class="nav-item"><a href="<?php echo e(route('payments.create')); ?>" class="nav-link <?php echo e(Route::is('payments.create') ? 'active' : ''); ?>">Create Payment</a></li>
-                                    <li class="nav-item"><a href="<?php echo e(route('payments.index')); ?>" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['payments.index', 'payments.edit', 'payments.show']) ? 'active' : ''); ?>">Manage Payments</a></li>
+                                    <!-- <li class="nav-item"><a href="<?php echo e(route('payments.index')); ?>" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['payments.index', 'payments.edit', 'payments.show']) ? 'active' : ''); ?>">Manage Payments</a></li> -->
                                     <li class="nav-item"><a href="<?php echo e(route('payments.manage')); ?>" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['payments.manage', 'payments.invoice', 'payments.receipts']) ? 'active' : ''); ?>">Student Payments</a></li>
 
                                 </ul>
@@ -118,16 +118,16 @@
                             <?php if(Qs::userIsTeamSA()): ?>
 
                             
-                            <li class="nav-item nav-item-submenu <?php echo e(in_array(Route::currentRouteName(), ['students.promotion', 'students.promotion_manage']) ? 'nav-item-expanded' : ''); ?>"><a href="#" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['students.promotion', 'students.promotion_manage' ]) ? 'active' : ''); ?>">Student Promotion</a>
+                            <!-- <li class="nav-item nav-item-submenu <?php echo e(in_array(Route::currentRouteName(), ['students.promotion', 'students.promotion_manage']) ? 'nav-item-expanded' : ''); ?>"><a href="#" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['students.promotion', 'students.promotion_manage' ]) ? 'active' : ''); ?>">Student Promotion</a>
                             <ul class="nav nav-group-sub">
                                 <li class="nav-item"><a href="<?php echo e(route('students.promotion')); ?>" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['students.promotion']) ? 'active' : ''); ?>">Promote Students</a></li>
                                 <li class="nav-item"><a href="<?php echo e(route('students.promotion_manage')); ?>" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['students.promotion_manage']) ? 'active' : ''); ?>">Manage Promotions</a></li>
-                            </ul>
+                            </ul> -->
 
                             </li>
 
                             
-                            <li class="nav-item"><a href="<?php echo e(route('students.graduated')); ?>" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['students.graduated' ]) ? 'active' : ''); ?>">Students Graduated</a></li>
+                            <!-- <li class="nav-item"><a href="<?php echo e(route('students.graduated')); ?>" class="nav-link <?php echo e(in_array(Route::currentRouteName(), ['students.graduated' ]) ? 'active' : ''); ?>">Students Graduated</a></li> -->
                                 <?php endif; ?>
 
                         </ul>
