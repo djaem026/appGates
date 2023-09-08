@@ -159,7 +159,7 @@
 
                 
                 <?php if(Qs::userIsTeamSAT()): ?>
-                <li class="nav-item nav-item-submenu <?php echo e(in_array(Route::currentRouteName(), ['exams.index', 'exams.edit', 'grades.index', 'grades.edit', 'marks.index', 'marks.manage', 'marks.bulk', 'marks.tabulation', 'marks.show', 'marks.batch_fix',]) ? 'nav-item-expanded nav-item-open' : ''); ?> ">
+                <!-- <li class="nav-item nav-item-submenu <?php echo e(in_array(Route::currentRouteName(), ['exams.index', 'exams.edit', 'grades.index', 'grades.edit', 'marks.index', 'marks.manage', 'marks.bulk', 'marks.tabulation', 'marks.show', 'marks.batch_fix',]) ? 'nav-item-expanded nav-item-open' : ''); ?> ">
                     <a href="#" class="nav-link"><i class="icon-books"></i> <span> Exams</span></a>
 
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Exams">
@@ -203,7 +203,7 @@
                             <?php endif; ?>
 
                     </ul>
-                </li>
+                </li> -->
                 <?php endif; ?>
 
 

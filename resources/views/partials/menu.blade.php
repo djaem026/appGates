@@ -59,7 +59,7 @@
                         <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
 
                         {{--Timetables--}}
-                            <li class="nav-item"><a href="{{ route('tt.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['tt.index']) ? 'active' : '' }}">Scheduless</a></li>
+                            <li class="nav-item"><a href="{{ route('tt.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['tt.index']) ? 'active' : '' }}">Schedules</a></li>
                         </ul>
                     </li>
                     @endif
@@ -158,7 +158,7 @@
 
                 {{--Exam--}}
                 @if(Qs::userIsTeamSAT())
-                <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['exams.index', 'exams.edit', 'grades.index', 'grades.edit', 'marks.index', 'marks.manage', 'marks.bulk', 'marks.tabulation', 'marks.show', 'marks.batch_fix',]) ? 'nav-item-expanded nav-item-open' : '' }} ">
+                <!-- <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['exams.index', 'exams.edit', 'grades.index', 'grades.edit', 'marks.index', 'marks.manage', 'marks.bulk', 'marks.tabulation', 'marks.show', 'marks.batch_fix',]) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="icon-books"></i> <span> Exams</span></a>
 
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Exams">
@@ -202,7 +202,7 @@
                             @endif
 
                     </ul>
-                </li>
+                </li> -->
                 @endif
 
 

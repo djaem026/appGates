@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('page_title', 'Manage TimeTables'); ?>
+<?php $__env->startSection('page_title', 'Manage Schedules'); ?>
 <?php $__env->startSection('content'); ?>
 
     <div class="card">
@@ -20,7 +20,7 @@
                         <?php $__currentLoopData = $my_classes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $mc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <a href="#ttr<?php echo e($mc->id); ?>" class="dropdown-item" data-toggle="tab"><?php echo e($mc->name); ?></a>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </div>
+                    </div>.
                 </li>
             </ul>
 
@@ -35,7 +35,7 @@
                            <div class="form-group row">
                                <label class="col-lg-3 col-form-label font-weight-semibold">Name <span class="text-danger">*</span></label>
                                <div class="col-lg-9">
-                                   <input name="name" value="<?php echo e(old('name')); ?>" required type="text" class="form-control" placeholder="Name of TimeTable">
+                                   <input name="name" value="<?php echo e(old('name')); ?>" required type="text" class="form-control" placeholder="Name of Schedule">
                                </div>
                            </div>
 
@@ -54,7 +54,7 @@
                                <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">Type (Class or Exam)</label>
                                <div class="col-lg-9">
                                    <select class="select form-control" name="exam_id" id="exam_id">
-                                       <option value="">Class Timetable</option>
+                                       <option value="">Class Schedule</option>
                                        <?php $__currentLoopData = $exams; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ex): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                            <option <?php echo e(old('exam_id') == $ex->id ? 'selected' : ''); ?> value="<?php echo e($ex->id); ?>"><?php echo e($ex->name); ?></option>
                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

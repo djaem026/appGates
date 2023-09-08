@@ -1,11 +1,12 @@
-@extends('layouts.master')
-@section('page_title', 'Manage Classes')
-@section('content')
+
+<?php $__env->startSection('page_title', 'Manage Classes'); ?>
+<?php $__env->startSection('content'); ?>
 
     <div class="card">
         <div class="card-header header-elements-inline">
             <h6 class="card-title">Manage Classes</h6>
-            {!! Qs::getPanelOptions() !!}
+            <?php echo Qs::getPanelOptions(); ?>
+
         </div>
 
         <div class="card-body">
@@ -25,10 +26,10 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($my_classes as $c)
+                            <?php $__currentLoopData = $my_classes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $c->name }}</td>
+                                    <td><?php echo e($loop->iteration); ?></td>
+                                    <td><?php echo e($c->name); ?></td>
                                     <td class="text-center">
                                         <div class="list-icons">
                                             <div class="dropdown">
@@ -37,22 +38,22 @@
                                                 </a>
 
                                                 <div class="dropdown-menu dropdown-menu-left">
-                                                    @if(Qs::userIsTeamSA())
-                                                    {{--Edit--}}
-                                                    <a href="{{ route('classes.edit', $c->id) }}" class="dropdown-item"><i class="icon-pencil"></i> Edit</a>
-                                                   @endif
-                                                        @if(Qs::userIsSuperAdmin())
-                                                    {{--Delete--}}
-                                                    <a id="{{ $c->id }}" onclick="confirmDelete(this.id)" href="#" class="dropdown-item"><i class="icon-trash"></i> Delete</a>
-                                                    <form method="post" id="item-delete-{{ $c->id }}" action="{{ route('classes.destroy', $c->id) }}" class="hidden">@csrf @method('delete')</form>
-                                                        @endif
+                                                    <?php if(Qs::userIsTeamSA()): ?>
+                                                    
+                                                    <a href="<?php echo e(route('classes.edit', $c->id)); ?>" class="dropdown-item"><i class="icon-pencil"></i> Edit</a>
+                                                   <?php endif; ?>
+                                                        <?php if(Qs::userIsSuperAdmin()): ?>
+                                                    
+                                                    <a id="<?php echo e($c->id); ?>" onclick="confirmDelete(this.id)" href="#" class="dropdown-item"><i class="icon-trash"></i> Delete</a>
+                                                    <form method="post" id="item-delete-<?php echo e($c->id); ?>" action="<?php echo e(route('classes.destroy', $c->id)); ?>" class="hidden"><?php echo csrf_field(); ?> <?php echo method_field('delete'); ?></form>
+                                                        <?php endif; ?>
 
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </tbody>
                         </table>
                     </div>
@@ -63,19 +64,19 @@
                             <div class="alert alert-info border-0 alert-dismissible">
                                 <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
 
-                                <span>When a class is created, a Section will be automatically created for the class, you can edit it or add more sections to the class at <a target="_blank" href="{{ route('sections.index') }}">Manage Sections</a></span>
+                                <span>When a class is created, a Section will be automatically created for the class, you can edit it or add more sections to the class at <a target="_blank" href="<?php echo e(route('sections.index')); ?>">Manage Sections</a></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <form class="ajax-store" method="post" action="{{ route('classes.store') }}">
-                                @csrf
+                            <form class="ajax-store" method="post" action="<?php echo e(route('classes.store')); ?>">
+                                <?php echo csrf_field(); ?>
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Name <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="name" value="{{ old('name') }}" required type="text" class="form-control" placeholder="Name of Class">
+                                        <input name="name" value="<?php echo e(old('name')); ?>" required type="text" class="form-control" placeholder="Name of Class">
                                     </div>
                                 </div>
 
@@ -83,9 +84,9 @@
                                     <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Class Type</label>
                                     <div class="col-lg-9">
                                         <select required data-placeholder="Select Class Type" class="form-control select" name="class_type_id" id="class_type_id">
-                                            @foreach($class_types as $ct)
-                                                <option {{ old('class_type_id') == $ct->id ? 'selected' : '' }} value="{{ $ct->id }}">{{ $ct->name }}</option>
-                                            @endforeach
+                                            <?php $__currentLoopData = $class_types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ct): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <option <?php echo e(old('class_type_id') == $ct->id ? 'selected' : ''); ?> value="<?php echo e($ct->id); ?>"><?php echo e($ct->name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                     </div>
                                 </div> -->
@@ -101,6 +102,8 @@
         </div>
     </div>
 
-    {{--Class List Ends--}}
+    
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\appGate\resources\views/pages/support_team/classes/index.blade.php ENDPATH**/ ?>

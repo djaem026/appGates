@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('page_title', 'Manage TimeTables')
+@section('page_title', 'Manage Schedules')
 @section('content')
 
     <div class="card">
@@ -53,7 +53,7 @@
                                <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">Type (Class or Exam)</label>
                                <div class="col-lg-9">
                                    <select class="select form-control" name="exam_id" id="exam_id">
-                                       <option value="">Class Timetable</option>
+                                       <option value="">Class Schedule</option>
                                        @foreach($exams as $ex)
                                            <option {{ old('exam_id') == $ex->id ? 'selected' : '' }} value="{{ $ex->id }}">{{ $ex->name }}</option>
                                        @endforeach
