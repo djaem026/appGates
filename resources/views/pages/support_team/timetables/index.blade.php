@@ -82,7 +82,7 @@
                             <tbody>
                             @foreach($tt_records->where('my_class_id', $mc->id) as $ttr)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $loop->iteration }}</td>s
                                     <td>{{ $ttr->name }}</td>
                                     <td>{{ $ttr->my_class->name }}</td>
                                     <td>{{ $ttr->year }}</td>
